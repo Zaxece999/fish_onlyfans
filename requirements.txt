@@ -1,0 +1,7 @@
+flask==3.0.2
+Werkzeug==3.0.1
+aiogram==3.6.0
+SQLAlchemy==2.0.29
+psycopg2-binary==2.9.9
+telethon
+opentele 

